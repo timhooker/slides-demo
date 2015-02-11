@@ -23,9 +23,3 @@ app.SlideItem = function(spec) {
 
   return self;
 };
-
-$(function () {
-  var page = $('body').data('page');
-  app[page]();
-  app.resizeItems();
-});

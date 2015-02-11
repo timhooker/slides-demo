@@ -1,10 +1,10 @@
 app.resizeItems = function() {
 
-  slideReorder();
-
   $('.slide-item').on('dblclick', resizeItems);
 
   function resizeItems(e) {
+
+    e.preventDefault();
     var item = $(this);
     var resize = item.children('.resize');
     resize.toggle();
@@ -13,16 +13,18 @@ app.resizeItems = function() {
     var tr = $('.top-right');
     var bl = $('.bottom-left');
     var br = $('.bottom-right');
+    // br.show();
 
     $('body').on('mousedown', '.bottom-right', resizeItemBR);
 
-    function resizeItemBR() {
+    function resizeItemBR(e) {
       $('body').off('mousemove');
       $('body').on('mousemove', newSize);
       $('body').on('mouseup', cancelTrack);
 
+      return false;
 
-      function cancelTrack() {
+      function cancelTrack(e) {
         $('body').off('mousemove', newSize);
         $('body').off('mouseup', cancelTrack);
         app.slidemaker();

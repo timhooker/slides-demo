@@ -1,4 +1,4 @@
-function slideReorder() {
+app.slideReorder = function() {
 
   $('.thumb-img').on('mousedown', function() {
     var item = $(this).closest('.slide-thumb');
@@ -62,7 +62,5 @@ function slideReorder() {
       $('body').off('mousemove', reorderSlide);
       $(document).off('selectstart dragstart', cancelTextSelection);
     }
-
-
   });
 }
