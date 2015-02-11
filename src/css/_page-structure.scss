@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1200px;
+  margin: 1em auto;
+}
+
+// All Slide properties
+.slide-maker {
+  background-color: #4c4c4e;
+  border: 1px solid black;
+  min-height: 30em;
+  width: 79%;
+  margin: 0 auto;
+  position: relative;
+  display: inline-block;
+}
+
+.slide-item {
+  position: absolute;
+}
+
+.slide-img {
+  background-color: deeppink;
+  height: 15em;
+  width: 25em;
+}
+
+.slide-text {
+  background-color: transparent;
+  border: none;
+  font-size: 3em;
+  line-height: 1em;
+  font-weight: bold;
+  color: #fff;
+}
+
+//  Setting Properties of Items we need to resize.. items
+.resize {
+  position: absolute;
+  padding: .5em;
+  border: 2px solid black;
+}
+
+$offset: -.5em;
+
+.top-left {
+  top: $offset;
+  left: $offset;
+}
+
+.top-right {
+  top: $offset;
+  right: $offset;
+}
+
+.bottom-left {
+  bottom: $offset;
+  left: $offset;
+}
+
+.bottom-right {
+  bottom: $offset;
+  right: $offset;
+  background-color: #fff;
+}
+
+.resize {
+  display: none;
+}
+
+// Setting properties of Thumbnails Chooser Area
+
+.slide-selection {
+  width: 20%;
+  background-color: #eee;
+  min-height: 30em;
+  display: inline-block;
+  vertical-align: top;
+  span {
+    vertical-align: top;
+  }
+}
+
+.slide-thumb {
+  display: block;
+  height: 8.5em;
+  margin: 1em;
+}
+
+
+.thumb-img {
+  background-color: #aaa;
+  display: inline-block;
+  width: 90%;
+  height: 100%;
+  &:active {
+    box-shadow: 2px 2px 0px;
+  }
+}
+
+.add-item {
+  height: 3em;
+  width: 3em;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 1em;
+  position: absolute;
+  bottom: .5em;
+  right: .5em;
+  background: transparent;
+  border: 3px solid #333;
+  font-size: .75em;
+  font-weight: bold;
+  color: #222;
+  opacity: .4; }
+  .add-item:hover {
+    opacity: 1; }
+  .add-item:active {
+    background-color: #6c6c6e; }
+  .add-item:focus {
+    outline: none; }
+
+.slide-selection {
+  position: relative; }
+
+.placeholder {
+  box-sizing: content-box;
+  border: 2px solid black;
+  display: none; }
+
+.add-above {
+  border-top: 5px solid black; }
