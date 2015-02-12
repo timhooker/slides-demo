@@ -30,8 +30,8 @@ app.slidemaker = function ()  {
       e.preventDefault();
       var top = e.pageY - moveY;
       var left = e.pageX - moveX;
-      var maxX = $('.slide-maker').width() - item.width();
-      var maxY = $('.slide-maker').height() - item.height();
+      var maxX = $('.slides').width() - item.width();
+      var maxY = $('.slides').height() - item.height();
 
       top < 0 ? top = 0 : true;
       top > maxY ? top = maxY : true;
